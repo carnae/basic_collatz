@@ -1,12 +1,12 @@
 use std::time::{Instant, Duration};
 use std::str::FromStr;
-use std::fs::File;
-use std::io::Write;
+//use std::fs::File;
+//use std::io::Write;
 
 fn main() {
     let low_bound = u128::from_str("2361183241434822606848").unwrap(); 
     let up_bound = u128::from_str("2361183241434823606848").unwrap();
-    let mut hailstones = File::create("HailstonesNormal.txt").expect("creation failed");
+    //let mut hailstones = File::create("HailstonesNormal.txt").expect("creation failed");
 
     let mut start = Instant::now();
     let mut duration = start.elapsed();
@@ -26,10 +26,8 @@ fn main() {
             }
         }
         let duration = start.elapsed();
-        //println!("Time taken is: {:?}", duration); //timer print 
-        }
-        //hailstones.write("\n".as_bytes()).expect("write failed");
+        println!("Time taken is: {:?}", duration); //timer print 
     }
-     //timer stop
-    
+        //hailstones.write("\n".as_bytes()).expect("write failed");
 }
+     //timer stop   
